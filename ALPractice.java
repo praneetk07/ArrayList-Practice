@@ -14,6 +14,23 @@ public class ALPractice{
 		return a;
 
 	}
+
+	public static void printList(ArrayList<Integer> x){
+		for(int i = 0; i < x.size(); i++){
+			int j = i+1;
+			int a = x.get(i);
+			if(j!=x.size()){
+				System.out.print( a + ", ");
+			}
+			else{
+				System.out.print(a);
+			}
+
+		}
+
+
+	}
+
 	public static void main(String [] args){
 		ArrayList<Integer> list1 = new ArrayList<>();
 		ArrayList<Integer> list2 = new ArrayList<>();
@@ -27,7 +44,7 @@ public class ALPractice{
 		}
 
 		System.out.println(combine(list1,list2));
-
+		printList(list2);
 
 
 	}
