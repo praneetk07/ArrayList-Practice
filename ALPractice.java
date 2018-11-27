@@ -10,9 +10,7 @@ public class ALPractice{
 			int c = y.get(i);
 			a.add(c);
 		}
-
 		return a;
-
 	}
 
 	public static void printList(ArrayList<Integer> x){
@@ -25,8 +23,24 @@ public class ALPractice{
 			else{
 				System.out.print(a);
 			}
-
 		}
+	}
+
+	public static ArrayList<Integer> removeDuplicates(ArrayList<Integer> x){
+		for(int i = 0; i < x.size(); i ++){
+			int a = x.get(i);
+			for(int j = i+1;j<x.size(); j++){
+				if(x.get(j)==a){
+					x.remove(j);
+				}
+
+
+			}
+		}
+
+		return x;
+
+
 
 
 	}
@@ -42,10 +56,14 @@ public class ALPractice{
 			list2.add(i);
 
 		}
-
 		System.out.println(combine(list1,list2));
 		printList(list2);
-
+		list2.add(5);
+		list2.add(9);
+		list2.add(12);
+		System.out.println();
+		System.out.println(list2);
+		System.out.println(removeDuplicates(list2));
 
 	}
 
